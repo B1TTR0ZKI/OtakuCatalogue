@@ -1,0 +1,352 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Bangers", system-ui;
+    font-weight: 300;
+    font-style: normal;
+    box-sizing: border-box;
+}
+
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    overflow: visible;
+    background: hsl(0deg 0% 7.06%) url('video.gif') no-repeat center center;
+    background-size: cover;
+}
+
+/*------backgroundImage-------*/
+
+
+#background {
+    position: fixed; /* Ensures the background stays fixed while scrolling */
+    top: 0; /* Positions the top of the background at the top of the viewport */
+    left: 0; /* Positions the left of the background at the left of the viewport */
+    width: 100%; /* Stretches the background to cover the entire width of the viewport */
+    height: 100vh; /* Stretches the background to cover the entire viewport height (vh stands for viewport height) */
+    background-image: url("background.png"); /* Sets the background image */
+    background-size: cover; /* Scales the image to cover the entire background area */
+    background-repeat: no-repeat; /* Prevents repeating the image if it's smaller than the viewport */
+    /* Add these lines for a dark overlay */
+    filter: brightness(30%);
+  }
+
+
+
+
+
+/*------Header-------*/
+
+
+
+
+.header{
+    min-height: 100vh;
+    width:  100%;
+    position: relative;
+
+}
+
+nav{
+    display: flex;
+    padding: 1% 4%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img{
+    width:  400px;
+}
+
+.links{
+    flex: 1;
+    text-align: right;
+    
+    }
+
+.links ul li{
+    list-style:  none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+
+}
+
+.links ul li a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 35px;
+    margin: 0 20px 20px 0;
+    
+}
+
+.links ul li a:hover{
+    color: #ff0000;
+    transition: 0.4s;
+}
+
+.text{
+    width: 90%;
+    color: #ffffff;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate( -50%, -50%);
+    text-align: center;
+}
+
+.text h1{
+    font-size: 62px;
+    color: #ff0000;
+}
+.text p{
+    margin: 10px 10px 40px;
+    word-spacing: 8px;
+    font-size: 30px;
+}
+
+.watch p{
+    font-size: 20px;
+    word-spacing: 0px;
+}
+
+.hianime{
+    width: 150px;
+    bottom: 0%;
+    border-radius: 50%;
+}
+
+
+
+/*---------watching------*/
+
+.watching{
+    position: relative;
+}
+.watching h1{
+    position: relative;
+    font-size: 50px;
+    color: #ff0000;
+    padding-left: 50px;
+    top: 20px;
+}
+
+.slider{ 
+	display: flex; 
+    align-items: center;
+    justify-content: center; 
+	min-height: 90vh; 
+	 
+} 
+
+.wrapper { 
+	max-width: 1400px; 
+	width: 100%; 
+	position: relative;
+
+} 
+
+.wrapper i { 
+	height: 50px; 
+	width: 50px; 
+	background: rgb(0, 253, 80); 
+	text-align: center; 
+	line-height: 50px; 
+	border-radius: 50%; 
+	cursor: pointer; 
+	position: absolute; 
+	top: 50%; 
+	font-size: 1.25 rem; 
+	transform: translateY(-50%); 
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23); 
+
+} 
+
+.wrapper i:first-child { 
+	left: -22px; 
+
+} 
+
+.wrapper i:last-child { 
+	right: -22px; 
+
+} 
+
+.wrapper .carousel { 
+	display: grid; 
+	grid-auto-flow: column; 
+	grid-auto-columns: calc((100% / 4) - 12px); 
+	gap: 16px; 
+	overflow-x: auto; 
+	scroll-snap-type: x mandatory; 
+	scroll-behavior: smooth; 
+	scrollbar-width: 0; 
+} 
+
+.carousel::-webkit-scrollbar { 
+	display: none; 
+} 
+
+.carousel :where(.card, .img) { 
+	display: flex; 
+	align-items: center; 
+	justify-content: center; 
+} 
+
+.carousel.dragging { 
+	scroll-snap-type: none; 
+	scroll-behavior: auto; 
+} 
+
+.carousel.no-transition { 
+	scroll-behavior: auto; 
+} 
+
+.carousel.dragging .card { 
+	cursor: grab; 
+	user-select: none; 
+} 
+
+.carousel .card { 
+	scroll-snap-align: start; 
+	height: 500px; 
+	list-style: none; 
+	background: #32ebffb5; 
+	border-radius: 8px; 
+	display: flex; 
+	cursor: pointer; 
+	width: 98%; 
+	padding-bottom: 15px; 
+	align-items: center; 
+	justify-content: center; 
+	flex-direction: column; 
+} 
+
+.carousel .card:hover{
+    color: rgb(255, 127, 127);
+    transition: 0.4s;
+}
+
+.card .img { 
+	background: green; 
+	width: 145px; 
+	height: 145px; 
+	border-radius: 50%; 
+
+} 
+
+.card .img img { 
+	width: 140px; 
+	height: 140px; 
+	object-fit: cover; 
+	border-radius: 50%; 
+	border: 4px solid #fff; 
+} 
+
+.card h2 { 
+	font-weight: 500; 
+	font-size: 1.56rem; 
+	margin: 30px 0 5px; 
+} 
+
+.card span { 
+	color: #6a6d78; 
+	font-size: 1.31rem; 
+
+} 
+
+/*--------completed-------*/
+
+.completed{
+    position: relative;
+}
+
+
+.completed h1{
+    position: relative;
+    font-size: 50px;
+    color: #ff0000;
+    padding-left: 50px;
+    top: 40px;
+}
+
+/*--------onhold-------*/
+
+.onHold{
+    position: relative;
+}
+
+
+.onHold h1{
+    position: relative;
+    font-size: 50px;
+    color: #ff0000;
+    padding-left: 50px;
+    top: 40px;
+}
+
+/*--------dropped-------*/
+
+.dropped{
+    position: relative;
+}
+
+
+.dropped h1{
+    position: relative;
+    font-size: 50px;
+    color: #ff0000;
+    padding-left: 50px;
+    top: 40px;
+}
+
+/*--------planToWatch-------*/
+
+.planToWatch{
+    position: relative;
+}
+
+
+.planToWatch h1{
+    position: relative;
+    font-size: 50px;
+    color: #ff0000;
+    padding-left: 50px;
+    top: 40px;
+}
+
+
+
+/*------footer------*/
+
+
+
+.end{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    color: #ffffff;
+    position: relative;
+    font-size: 20px;
+}
+
+.end h2{    
+    color: #ff0000;
+    margin-bottom: 25px;
+    margin-top: 20px;
+    
+}
+
+.end a{
+    text-decoration: none;
+    color: #ff0000;
+}
+
+.end a:hover{
+    color:aqua;
+}
